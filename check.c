@@ -6,7 +6,7 @@
 /*   By: ayegen <ayegen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 01:07:37 by ayegen            #+#    #+#             */
-/*   Updated: 2024/07/06 20:19:37 by ayegen           ###   ########.fr       */
+/*   Updated: 2024/07/06 21:40:38 by ayegen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,18 +81,9 @@ void	mapcheck(t_state *data)
 {
 	char	**map;
 	int		i;
-	int		k;
-	
+
 	i = -1;
-	k = 0;
-	if(data->y < 3 || data->x < 3)
-	{
-		while(k < data->y)
-				free(data->map[k]);
-		free(data->map);
-		free(data);
-		ft_error("map is too small");
-	}
+	check_map_null(data);
 	map = malloc(sizeof(char *) * (data->y + 1));
 	if (!map)
 		exit(0);

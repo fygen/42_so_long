@@ -6,7 +6,7 @@
 /*   By: ayegen <ayegen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 04:34:27 by ayegen            #+#    #+#             */
-/*   Updated: 2024/07/06 16:19:11 by ayegen           ###   ########.fr       */
+/*   Updated: 2024/07/06 21:42:02 by ayegen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,20 @@ void	rectangular_check(char **map)
 		if (len != x)
 			free_map(map, "The map isn't rectangular!");
 		i++;
+	}
+}
+
+void	check_map_null(t_state *data)
+{
+	int	k;
+
+	k = 0;
+	if (data->y < 3 || data->x < 3)
+	{
+		while (k < data->y)
+			free(data->map[k]);
+		free(data->map);
+		free(data);
+		ft_error("map is too small");
 	}
 }

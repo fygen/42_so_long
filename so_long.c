@@ -6,7 +6,7 @@
 /*   By: ayegen <ayegen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 01:42:47 by ayegen            #+#    #+#             */
-/*   Updated: 2024/07/06 19:37:16 by ayegen           ###   ########.fr       */
+/*   Updated: 2024/07/06 21:40:48 by ayegen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ static int	close_window(t_state *data)
 int	main(int argc, char **argv)
 {
 	t_state	*data;
+
 	if (argc == 2)
 	{
 		arg_check(argv[1]);

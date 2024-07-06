@@ -6,7 +6,7 @@
 /*   By: ayegen <ayegen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 21:00:14 by ayegen            #+#    #+#             */
-/*   Updated: 2024/07/06 16:19:06 by ayegen           ###   ########.fr       */
+/*   Updated: 2024/07/06 21:40:58 by ayegen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void		col_check(t_state *data, char **map);
 void		is_closed_map(char **map);
 void		mapcheck(t_state *data);
 void		arg_check(char *arg);
+void		check_map_null(t_state *data);
 
 // Utils
 
